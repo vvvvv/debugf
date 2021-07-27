@@ -157,8 +157,8 @@ var hello = `* * * * * * * * * * * * * * * * * * * *
 * * * * * * * DEBUG BUILD * * * * * * *
 * * * * * * * * * * * * * * * * * * * *
 `
-var help = `- Set DELOG_STACKTRACE=ERROR to see stack traces when delog.F() encounters an error.
-- Set DELOG_STACKTRACE=ALL to see stack traces on every call to delog.F().
+var help = `- Set DELOG_STACKTRACE=ERROR to see stack traces when delog.Printf() encounters an error.
+- Set DELOG_STACKTRACE=ALL to see stack traces on every call to delog.Printf().
 `
 
 func msg() {

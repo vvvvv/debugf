@@ -29,8 +29,8 @@ $ main.bin
 * * * * * * * * * * * * * * * * * * * *
 * * * * * * * DEBUG BUILD * * * * * * *
 * * * * * * * * * * * * * * * * * * * *
-- Set DELOG_STACKTRACE=ERROR to see stack traces when delog.F() encounters an error.
-- Set DELOG_STACKTRACE=ALL to see stack traces on every call to delog.F().
+- Set DELOG_STACKTRACE=ERROR to see stack traces when delog.Printf() encounters an error.
+- Set DELOG_STACKTRACE=ALL to see stack traces on every call to delog.Printf().
 
 hello world
 23:48:22 [72.89µs] main.go:12: hi from delog 2021-07-27 23:48:22.744363 +0200 CEST m=+0.000166948
