@@ -21,6 +21,7 @@ func main() {
 }
 ```
 
+Building it with `-tags delog`
 ```
 $ go build -tags delog
 $ main.bin
@@ -35,6 +36,7 @@ hello world
 23:48:22 [72.89µs] main.go:12: hi from delog 2021-07-27 23:48:22.744363 +0200 CEST m=+0.000166948
 ```
 
+Building it without tags
 ```
 $ go build 
 $ main.bin
