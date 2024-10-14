@@ -67,7 +67,7 @@ var Printf PrintfFunc = func(_ string, _ ...interface{}) {}
   0x10009c6b0      d65f03c0        RET
   0x10009c6b4      00000000        ?
   0x10009c6b8      00000000        ?
-0x10009c6bc      00000000        ?
+  0x10009c6bc      00000000        ?
 ```
 
 ## Stack Traces 
