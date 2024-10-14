@@ -1,8 +1,8 @@
 # delog
 
-Delog is a simple debugging helper that provides a single function, `delog.Printf`, which offers the same ergonomics as `fmt.Printf`.  
+`delog` is a simple debugging helper that provides a single function, `delog.Printf`, which offers the same ergonomics as `fmt.Printf`.  
 The difference is that output is only printed when compiled with the `delog` build tag.  
-Compiling without `delog` makes `delog.Printf` a no-op, eliminating any runtime overhead.
+Compiling without `delog` makes `delog.Printf` a no-op, eliminating any runtime overhead.  
 
 ## Usage
 
@@ -58,7 +58,7 @@ This message is printed by default to serve as a warning in production environme
 
 ## Zero Overhead When Building With delog Disabled
 When the code from the previous section is build without the `delog` build tag `go build` only `hello world` gets printed.
-Moreover calls to `delog.Printf` are entirely removed at compile time, resulting in zero runtime overhead. This allows you to include delog.Printf statements in your code without affecting performance in production builds.  
+Moreover calls to `delog.Printf` are entirely removed at compile time, resulting in zero runtime overhead. This allows you to include `delog.Printf` statements in your code without affecting performance in production builds.  
 Using Go's internal objdump tool (`go tool objdump <binary>`) shows the only reference to `delog` in the binary is in fact a no-op.  
 
 ```go
@@ -72,10 +72,10 @@ var Printf PrintfFunc = func(_ string, _ ...interface{}) {}
 
 ## Stack Traces 
 
-`delog` can optionally print stack traces when logging errors. This behavior is controlled by the DELOG_STACKTRACE environment variable:
+`delog` can optionally print stack traces when logging errors. This behavior is controlled by the `DELOG_STACKTRACE` environment variable:
 
-- DELOG_STACKTRACE=ERROR: Prints a stack trace when delog.Printf() encounters an error.
-- DELOG_STACKTRACE=ALL: Prints a stack trace on every call to delog.Printf().
+- `DELOG_STACKTRACE=ERROR`: Prints a stack trace when `delog.Printf()` encounters an error.
+- `DELOG_STACKTRACE=ALL`: Prints a stack trace on every call to `delog.Printf()`.
 
 ```go
 package main
