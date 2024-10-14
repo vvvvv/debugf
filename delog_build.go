@@ -11,6 +11,10 @@ import (
 	"time"
 )
 
+var (
+	DisableDebugWarning string = "0"
+)
+
 type stackflag uint8
 
 const (
@@ -173,7 +177,9 @@ var timeStart time.Time
 
 func init() {
 	timeStart = time.Now()
-	msg()
+	if(DisableDebugWarning == "0"){
+		msg()
+	}
 
 	Printf = printf
 
